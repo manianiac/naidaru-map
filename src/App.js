@@ -22,8 +22,8 @@ function App() {
         maxZoom={7}
       >
         <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="/tiles/{z}/{x}/{y}.png"
+          // attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="tiles/{z}/{x}/{y}.png"
           noWrap={true}
         />
         <EventComponent />
