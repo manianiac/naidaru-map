@@ -12,6 +12,82 @@ import {
   GiWoodenDoor,
 } from "react-icons/gi";
 import { IconContext } from "react-icons";
+import {
+  CAVE,
+  CITY,
+  DUNGEON,
+  FAR,
+  FARM,
+  FORT,
+  MID,
+  NEAR,
+  PORTAL,
+  TOWN,
+  UNKNOWN,
+  VILLAGE,
+} from "../../consts";
+
+export const determineIcon = ({ type, major }, zoom) => {
+  switch (type) {
+    case CITY:
+      if (zoom >= FAR || major) {
+        return city;
+      } else {
+        return null;
+      }
+    case VILLAGE:
+      if (zoom >= NEAR || major) {
+        return village;
+      } else {
+        return null;
+      }
+    case TOWN:
+      if (zoom >= MID || major) {
+        return town;
+      } else {
+        return null;
+      }
+    case DUNGEON:
+      if (zoom >= NEAR || major) {
+        return dungeon;
+      } else {
+        return null;
+      }
+    case CAVE:
+      if (zoom >= NEAR || major) {
+        return cave;
+      } else {
+        return null;
+      }
+    case FORT:
+      if (zoom >= 4 || major) {
+        return fort;
+      } else {
+        return null;
+      }
+    case PORTAL:
+      if (zoom >= 5 || major) {
+        return portal;
+      } else {
+        return null;
+      }
+    case UNKNOWN:
+      if (zoom >= NEAR || major) {
+        return unknown;
+      } else {
+        return null;
+      }
+    case FARM:
+      if (zoom >= NEAR || major) {
+        return farm;
+      } else {
+        return null;
+      }
+    default:
+      console.error("Invalid Type", type);
+      return null;
+  }
+};
 
 export const city = L.divIcon({
   className: "custom-icon",

@@ -1,9 +1,9 @@
 import "./App.css";
 import React, { useState } from "react";
-import { MapContainer, Marker, Tooltip } from "react-leaflet";
+import { MapContainer } from "react-leaflet";
 import { CRS } from "leaflet";
 import EventComponent from "./components/EventComponent";
-import MapMarkers from "./components/markers/MapMarker";
+import MapElements from "./components/markers/MapElements";
 
 const App = () => {
   const [currentZoom, setZoomLevel] = useState(2);
@@ -22,7 +22,7 @@ const App = () => {
         crs={CRS.Simple}
         maxZoom={7}
       >
-        <MapMarkers zoom={currentZoom} coords={coords} />
+        <MapElements zoom={currentZoom} coords={coords} />
         <EventComponent updateZoom={updateZoom} updateCoords={updateCoords} />
       </MapContainer>
     </div>
