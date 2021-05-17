@@ -17,8 +17,8 @@ import {
   UNKNOWN,
   VILLAGE,
 } from "../consts";
-import { markers } from "./markers";
-import { borders } from "./borders";
+import { markers } from "../../data/markers";
+import { borders } from "../../data/borders";
 import MapMarker from "./MapMarker";
 
 const MapElements = ({ zoom, coords }) => {

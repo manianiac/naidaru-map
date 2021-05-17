@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import { MapContainer } from "react-leaflet";
+import { AttributionControl, MapContainer } from "react-leaflet";
 import { CRS } from "leaflet";
 import EventComponent from "./components/EventComponent";
 import MapElements from "./components/markers/MapElements";
@@ -21,9 +21,14 @@ const App = () => {
         style={{ height: window.innerHeight, width: window.innerWidth }}
         crs={CRS.Simple}
         maxZoom={7}
+        attributionControl={false}
       >
         <MapElements zoom={currentZoom} coords={coords} />
         <EventComponent updateZoom={updateZoom} updateCoords={updateCoords} />
+        <AttributionControl
+          position={"bottomright"}
+          prefix={"Icons from Game-icons.net"}
+        />
       </MapContainer>
     </div>
   );

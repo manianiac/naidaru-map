@@ -7,7 +7,7 @@ import {
   // TOWN,
   UNKNOWN,
   // VILLAGE,
-} from "../consts";
+} from "../components/consts";
 export const markers = [
   {
     name: "Test City",
