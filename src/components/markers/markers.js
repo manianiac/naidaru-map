@@ -1,12 +1,12 @@
 import {
-  CAVE,
+  // CAVE,
   CITY,
-  DUNGEON,
-  FORT,
+  // DUNGEON,
+  // FORT,
   PORTAL,
-  TOWN,
+  // TOWN,
   UNKNOWN,
-  VILLAGE,
+  // VILLAGE,
 } from "../consts";
 export const markers = [
   {

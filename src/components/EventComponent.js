@@ -1,7 +1,7 @@
 import { useMapEvents } from "react-leaflet";
 
 const EventComponent = ({ updateZoom, updateCoords }) => {
-  const map = useMapEvents({
+  useMapEvents({
     click: (e) => {
       console.log(e.latlng);
       updateCoords([e.latlng.lat, e.latlng.lng]);
