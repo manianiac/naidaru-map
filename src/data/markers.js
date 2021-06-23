@@ -15,7 +15,7 @@ export const markers = [
     location: [-95.96107721328735, 217.52623462677002],
     description: "A city in Amant",
     link: "https://kanka.io/en-US/campaign/17734/locations/115824",
-    major: True,
+    major: true,
   },
   {
     name: "Bemoor",
